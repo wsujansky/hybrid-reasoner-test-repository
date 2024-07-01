@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gov.hhs.fda.shield</groupId>
+  <artifactId>absent-reasoner-tester</artifactId>
+  <version>0.0.1-SNAPSHOT</version> 
+  <packaging>jar</packaging>
+
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+
+      </plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+    </plugins>
+  </build>
+  
+
+
+	<dependencies>
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-api</artifactId>
+			<version>${owlapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-impl</artifactId>
+			<version>${owlapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-apibinding</artifactId>
+			<version>${owlapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.semanticweb.elk</groupId>
+			<artifactId>shield-elk-owlapi</artifactId>
+            <version>${elk.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticweb.elk</groupId>
+			<artifactId>shield-elk-reasoner</artifactId>
+            <version>${elk.version}</version>
+		</dependency>
+<!-- -->		
+		<dependency>
+			<groupId>gov.hhs.fda.shield</groupId>
+			<artifactId>temporal-subsumption-tester</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+<!-- -->
+
+		<dependency>
+			<groupId>gov.hhs.fda.shield</groupId>
+			<artifactId>shield-absent-reasoner-TEST</artifactId>
+			<version>0.4.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-nop</artifactId>
+    <version>1.7.12</version>
+    <scope>test</scope>
+</dependency>
+		
+	</dependencies>
+	
+	<properties>
+
+		<owlapi.version>4.1.3</owlapi.version>
+		<protege.version>5.5.0</protege.version>
+		<elk.version>0.4.3</elk.version>
+
+		<java.version>11</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+  
+  
+</project>
