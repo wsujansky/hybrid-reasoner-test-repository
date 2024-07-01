@@ -37,6 +37,13 @@
 
 
 	<dependencies>
+
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-osgidistribution</artifactId>
+			<version>4.5.26</version>
+		</dependency>
+		<!--
 		<dependency>
 			<groupId>net.sourceforge.owlapi</groupId>
 			<artifactId>owlapi-api</artifactId>
@@ -66,33 +73,38 @@
 			<artifactId>shield-elk-reasoner</artifactId>
             <version>${elk.version}</version>
 		</dependency>
-<!-- -->		
+-->
+
+		<!-- 		
 		<dependency>
 			<groupId>gov.hhs.fda.shield</groupId>
 			<artifactId>temporal-subsumption-tester</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-<!-- -->
-
+ 
+-->
 		<dependency>
 			<groupId>gov.hhs.fda.shield</groupId>
 			<artifactId>shield-absent-reasoner-TEST</artifactId>
 			<version>0.4.3</version>
-			<exclusions>
+
+<!--			<exclusions>
 				<exclusion>
 					<groupId>log4j</groupId>
 					<artifactId>log4j</artifactId>
 				</exclusion>
 			</exclusions>
+-->
 		</dependency>
 
-
+		<!--
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-nop</artifactId>
     <version>1.7.12</version>
     <scope>test</scope>
 </dependency>
+-->
 		
 	</dependencies>
 	

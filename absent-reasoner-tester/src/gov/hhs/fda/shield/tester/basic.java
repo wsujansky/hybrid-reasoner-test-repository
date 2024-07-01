@@ -2,6 +2,7 @@ package gov.hhs.fda.shield.tester;
 
 import java.io.File;
 
+import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -18,6 +19,8 @@ public class basic {
 	public static void main(String[] args) throws OWLOntologyStorageException, OWLOntologyCreationException {
 		// TODO Auto-generated method stub
 		
+		System.out.println("Starting...");
+		
 		OWLOntologyManager ontologyManager = OWLManager.createOWLOntologyManager();
 		OWLOntologyManager outputOntologyManager = OWLManager.createOWLOntologyManager();
 		OWLOntologyManager statementOntologyManager = OWLManager.createOWLOntologyManager();
@@ -26,7 +29,7 @@ public class basic {
 		OWLOntology originalOnt = ontologyManager.loadOntologyFromOntologyDocument(
 		new File("C:/Users/wsuja/Documents/ConsultingEngagements/FDA/Research/SWEC-Classification/SWEC-Ontology-Example-9.owx"));
 		
-		/***** CREATE ElkReasonerSHIELD ******/
+// CREATE ElkReasonerSHIELD 
 		ElkReasonerFactorySHIELD reasonerFactory = new ElkReasonerFactorySHIELD();
 		OWLReasoner reasonerSHIELD = reasonerFactory.createBufferingReasoner(originalOnt);  // Only buffering reasoners will be allowed
 
@@ -35,7 +38,7 @@ public class basic {
 		System.out.println();
 		System.out.println("Disposing...");
 		reasonerSHIELD.dispose();
-
+/* */
 
 	}
 
