@@ -85,10 +85,10 @@
 -->
 		<dependency>
 			<groupId>gov.hhs.fda.shield</groupId>
-			<artifactId>shield-absent-reasoner-TEST</artifactId>
+			<artifactId>shield-hybrid-reasoner</artifactId>
 			<version>0.4.3</version>
-
-<!--			<exclusions>
+<!--
+			<exclusions>
 				<exclusion>
 					<groupId>log4j</groupId>
 					<artifactId>log4j</artifactId>
