@@ -37,13 +37,14 @@
 
 
 	<dependencies>
-
+<!--
 		<dependency>
 			<groupId>net.sourceforge.owlapi</groupId>
 			<artifactId>owlapi-osgidistribution</artifactId>
 			<version>4.5.26</version>
 		</dependency>
-		<!--
+-->
+		<!-- -->
 		<dependency>
 			<groupId>net.sourceforge.owlapi</groupId>
 			<artifactId>owlapi-api</artifactId>
@@ -62,7 +63,7 @@
 			<version>${owlapi.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
+<!--
 		<dependency>
 			<groupId>org.semanticweb.elk</groupId>
 			<artifactId>shield-elk-owlapi</artifactId>
@@ -73,7 +74,7 @@
 			<artifactId>shield-elk-reasoner</artifactId>
             <version>${elk.version}</version>
 		</dependency>
--->
+ -->
 
 		<!-- 		
 		<dependency>
